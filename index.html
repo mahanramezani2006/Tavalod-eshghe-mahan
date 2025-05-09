@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عاشقتم خانوم ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #fff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .text-container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .message {
+            display: inline;
+            font-size: 18px;
+            color: #333;
+            margin: 0 5px;
+        }
+
+        .infinity {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 20px 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container" id="container">
+        <div class="infinity">∞</div>
+    </div>
+
+    <script>
+        function addMessage() {
+            const container = document.getElementById('container');
+            const message = document.createElement('span');
+            message.className = 'message';
+            message.textContent = 'عاشقتم خانوم ❤️';
+            container.appendChild(message);
+        }
+
+        // Add initial messages
+        for (let i = 0; i < 200; i++) {
+            addMessage();
+        }
+
+        // Add more messages when scrolling to bottom
+        window.addEventListener('scroll', () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                for (let i = 0; i < 100; i++) {
+                    addMessage();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
